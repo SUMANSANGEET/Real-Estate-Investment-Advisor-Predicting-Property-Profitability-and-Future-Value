@@ -1,0 +1,256 @@
+{
+  "city_median_pps": {
+    "Ahmedabad": 9193.54,
+    "Amritsar": 9221.4,
+    "Bangalore": 9344.15,
+    "Bhopal": 9236.16,
+    "Bhubaneswar": 9168.65,
+    "Bilaspur": 9075.79,
+    "Chennai": 9328.56,
+    "Coimbatore": 9269.89,
+    "Cuttack": 9203.19,
+    "Dehradun": 9301.9,
+    "Durgapur": 9158.12,
+    "Dwarka": 9236.76,
+    "Faridabad": 9169.96,
+    "Gaya": 9240.63,
+    "Gurgaon": 9232.58,
+    "Guwahati": 9285.27,
+    "Haridwar": 9087.53,
+    "Hyderabad": 9321.62,
+    "Indore": 9236.14,
+    "Jaipur": 9091.43,
+    "Jamshedpur": 9085.92,
+    "Jodhpur": 9269.12,
+    "Kochi": 9280.63,
+    "Kolkata": 9224.68,
+    "Lucknow": 9441.21,
+    "Ludhiana": 9154.49,
+    "Mangalore": 9540.68,
+    "Mumbai": 9326.87,
+    "Mysore": 9271.91,
+    "Nagpur": 9236.4,
+    "New Delhi": 9098.42,
+    "Noida": 9437.07,
+    "Patna": 9196.95,
+    "Pune": 9538.74,
+    "Raipur": 9193.18,
+    "Ranchi": 9399.54,
+    "Silchar": 9239.74,
+    "Surat": 9479.57,
+    "Trivandrum": 9083.21,
+    "Vijayawada": 9255.56,
+    "Vishakhapatnam": 9307.81,
+    "Warangal": 9268.72
+  },
+  "state_cities": {
+    "Andhra Pradesh": [
+      "Vijayawada",
+      "Vishakhapatnam"
+    ],
+    "Assam": [
+      "Guwahati",
+      "Silchar"
+    ],
+    "Bihar": [
+      "Gaya",
+      "Patna"
+    ],
+    "Chhattisgarh": [
+      "Bilaspur",
+      "Raipur"
+    ],
+    "Delhi": [
+      "Dwarka",
+      "New Delhi"
+    ],
+    "Gujarat": [
+      "Ahmedabad",
+      "Surat"
+    ],
+    "Haryana": [
+      "Faridabad",
+      "Gurgaon"
+    ],
+    "Jharkhand": [
+      "Jamshedpur",
+      "Ranchi"
+    ],
+    "Karnataka": [
+      "Bangalore",
+      "Mangalore",
+      "Mysore"
+    ],
+    "Kerala": [
+      "Kochi",
+      "Trivandrum"
+    ],
+    "Madhya Pradesh": [
+      "Bhopal",
+      "Indore"
+    ],
+    "Maharashtra": [
+      "Mumbai",
+      "Nagpur",
+      "Pune"
+    ],
+    "Odisha": [
+      "Bhubaneswar",
+      "Cuttack"
+    ],
+    "Punjab": [
+      "Amritsar",
+      "Ludhiana"
+    ],
+    "Rajasthan": [
+      "Jaipur",
+      "Jodhpur"
+    ],
+    "Tamil Nadu": [
+      "Chennai",
+      "Coimbatore"
+    ],
+    "Telangana": [
+      "Hyderabad",
+      "Warangal"
+    ],
+    "Uttar Pradesh": [
+      "Lucknow",
+      "Noida"
+    ],
+    "Uttarakhand": [
+      "Dehradun",
+      "Haridwar"
+    ],
+    "West Bengal": [
+      "Durgapur",
+      "Kolkata"
+    ]
+  },
+  "options": {
+    "Property_Type": [
+      "Apartment",
+      "Independent House",
+      "Villa"
+    ],
+    "Furnished_Status": [
+      "Furnished",
+      "Semi-furnished",
+      "Unfurnished"
+    ],
+    "Public_Transport_Accessibility": [
+      "High",
+      "Low",
+      "Medium"
+    ],
+    "Facing": [
+      "East",
+      "North",
+      "South",
+      "West"
+    ],
+    "Owner_Type": [
+      "Broker",
+      "Builder",
+      "Owner"
+    ],
+    "Availability_Status": [
+      "Ready_to_Move",
+      "Under_Construction"
+    ]
+  },
+  "amenities": [
+    "Gym",
+    "Pool",
+    "Clubhouse",
+    "Garden",
+    "Playground"
+  ],
+  "ranges": {
+    "size": [
+      500,
+      5000
+    ],
+    "price": [
+      10.0,
+      500.0
+    ]
+  },
+  "best_models": {
+    "classifier": "XGBoost",
+    "regressor": "XGBoost"
+  },
+  "clf_metrics": {
+    "Logistic Regression": {
+      "Accuracy": 0.8485,
+      "Precision": 0.8441,
+      "Recall": 0.8425,
+      "F1": 0.8433,
+      "ROC_AUC": 0.9307
+    },
+    "Random Forest": {
+      "Accuracy": 0.8404,
+      "Precision": 0.8355,
+      "Recall": 0.8346,
+      "F1": 0.835,
+      "ROC_AUC": 0.9231
+    },
+    "XGBoost": {
+      "Accuracy": 0.8511,
+      "Precision": 0.8457,
+      "Recall": 0.8468,
+      "F1": 0.8462,
+      "ROC_AUC": 0.9329
+    }
+  },
+  "reg_metrics": {
+    "Linear Regression": {
+      "RMSE": 20.1462,
+      "MAE": 15.3286,
+      "R2": 0.9896,
+      "MAPE": 0.0822
+    },
+    "Random Forest": {
+      "RMSE": 16.377,
+      "MAE": 11.5221,
+      "R2": 0.9931,
+      "MAPE": 0.0323
+    },
+    "XGBoost": {
+      "RMSE": 15.6064,
+      "MAE": 10.9884,
+      "R2": 0.9938,
+      "MAPE": 0.0315
+    }
+  },
+  "importance_clf": {
+    "Nearby_Schools": 0.004800000227987766,
+    "Furnished_Status": 0.006399999838322401,
+    "Owner_Type": 0.006599999964237213,
+    "Facing": 0.009600000455975533,
+    "Age_of_Property": 0.03840000182390213,
+    "Availability_Status": 0.0494999997317791,
+    "Infrastructure_Score": 0.057100001722574234,
+    "Log_PPS_vs_City": 0.05860000103712082,
+    "PPS_INR": 0.06120000034570694,
+    "Property_Type": 0.06270000338554382,
+    "Public_Transport_Accessibility": 0.09690000116825104,
+    "City": 0.5174999833106995
+  },
+  "importance_reg": {
+    "Size_per_BHK": 0.0006000000284984708,
+    "Facing": 0.000699999975040555,
+    "Age_of_Property": 0.0034000000450760126,
+    "Availability_Status": 0.005499999970197678,
+    "Log_PPS_vs_City": 0.006000000052154064,
+    "Infrastructure_Score": 0.006000000052154064,
+    "Property_Type": 0.006500000134110451,
+    "Public_Transport_Accessibility": 0.007000000216066837,
+    "Size_in_SqFt": 0.031099999323487282,
+    "City": 0.05959999933838844,
+    "PPS_INR": 0.1386999934911728,
+    "Price_in_Lakhs": 0.7321000099182129
+  },
+  "growth_threshold": 0.075,
+  "forecast_years": 5
+}

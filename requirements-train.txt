@@ -1,0 +1,7 @@
+# Training / notebook environment = serving deps + experiment tooling
+-r requirements.txt
+optuna==5.0.0
+mlflow==3.17.2
+jupyter
+nbformat
+pytest

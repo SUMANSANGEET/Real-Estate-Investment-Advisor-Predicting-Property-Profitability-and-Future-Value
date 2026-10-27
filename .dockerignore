@@ -1,0 +1,14 @@
+.git
+.github
+__pycache__
+*.pyc
+.ipynb_checkpoints
+*.ipynb
+mlflow.db
+mlruns
+logs
+tests
+data/real
+data/cleaned_housing_data.csv.gz
+models
+DEPLOY.md

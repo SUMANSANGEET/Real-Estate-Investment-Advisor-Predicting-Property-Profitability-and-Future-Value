@@ -1,0 +1,463 @@
+{
+  "mode": "legacy",
+  "horizon_years": 5,
+  "trained_at": "2026-10-26 13:07 UTC",
+  "num_features": [
+    "BHK",
+    "Size_in_SqFt",
+    "Price_in_Lakhs",
+    "PPS_INR",
+    "Log_PPS_vs_City",
+    "Age_of_Property",
+    "Floor_Ratio",
+    "Total_Floors",
+    "Nearby_Schools",
+    "Nearby_Hospitals",
+    "Amenity_Count",
+    "Infrastructure_Score",
+    "Size_per_BHK",
+    "City_Tier"
+  ],
+  "cat_features": [
+    "City",
+    "Property_Type",
+    "Furnished_Status",
+    "Public_Transport_Accessibility",
+    "Parking_Space",
+    "Security",
+    "Facing",
+    "Owner_Type",
+    "Availability_Status"
+  ],
+  "age_base": "fixed_2025",
+  "city_median_pps": {
+    "Ahmedabad": 9193.54,
+    "Amritsar": 9221.4,
+    "Bangalore": 9344.15,
+    "Bhopal": 9236.16,
+    "Bhubaneswar": 9168.65,
+    "Bilaspur": 9075.79,
+    "Chennai": 9328.56,
+    "Coimbatore": 9269.89,
+    "Cuttack": 9203.19,
+    "Dehradun": 9301.9,
+    "Durgapur": 9158.12,
+    "Dwarka": 9236.76,
+    "Faridabad": 9169.96,
+    "Gaya": 9240.63,
+    "Gurgaon": 9232.58,
+    "Guwahati": 9285.27,
+    "Haridwar": 9087.53,
+    "Hyderabad": 9321.62,
+    "Indore": 9236.14,
+    "Jaipur": 9091.43,
+    "Jamshedpur": 9085.92,
+    "Jodhpur": 9269.12,
+    "Kochi": 9280.63,
+    "Kolkata": 9224.68,
+    "Lucknow": 9441.21,
+    "Ludhiana": 9154.49,
+    "Mangalore": 9540.68,
+    "Mumbai": 9326.87,
+    "Mysore": 9271.91,
+    "Nagpur": 9236.4,
+    "New Delhi": 9098.42,
+    "Noida": 9437.07,
+    "Patna": 9196.95,
+    "Pune": 9538.74,
+    "Raipur": 9193.18,
+    "Ranchi": 9399.54,
+    "Silchar": 9239.74,
+    "Surat": 9479.57,
+    "Trivandrum": 9083.21,
+    "Vijayawada": 9255.56,
+    "Vishakhapatnam": 9307.81,
+    "Warangal": 9268.72
+  },
+  "city_crime": {},
+  "crime_fallback": 0.0,
+  "state_cities": {
+    "Andhra Pradesh": [
+      "Vijayawada",
+      "Vishakhapatnam"
+    ],
+    "Assam": [
+      "Guwahati",
+      "Silchar"
+    ],
+    "Bihar": [
+      "Gaya",
+      "Patna"
+    ],
+    "Chhattisgarh": [
+      "Bilaspur",
+      "Raipur"
+    ],
+    "Delhi": [
+      "Dwarka",
+      "New Delhi"
+    ],
+    "Gujarat": [
+      "Ahmedabad",
+      "Surat"
+    ],
+    "Haryana": [
+      "Faridabad",
+      "Gurgaon"
+    ],
+    "Jharkhand": [
+      "Jamshedpur",
+      "Ranchi"
+    ],
+    "Karnataka": [
+      "Bangalore",
+      "Mangalore",
+      "Mysore"
+    ],
+    "Kerala": [
+      "Kochi",
+      "Trivandrum"
+    ],
+    "Madhya Pradesh": [
+      "Bhopal",
+      "Indore"
+    ],
+    "Maharashtra": [
+      "Mumbai",
+      "Nagpur",
+      "Pune"
+    ],
+    "Odisha": [
+      "Bhubaneswar",
+      "Cuttack"
+    ],
+    "Punjab": [
+      "Amritsar",
+      "Ludhiana"
+    ],
+    "Rajasthan": [
+      "Jaipur",
+      "Jodhpur"
+    ],
+    "Tamil Nadu": [
+      "Chennai",
+      "Coimbatore"
+    ],
+    "Telangana": [
+      "Hyderabad",
+      "Warangal"
+    ],
+    "Uttar Pradesh": [
+      "Lucknow",
+      "Noida"
+    ],
+    "Uttarakhand": [
+      "Dehradun",
+      "Haridwar"
+    ],
+    "West Bengal": [
+      "Durgapur",
+      "Kolkata"
+    ]
+  },
+  "options": {
+    "Property_Type": [
+      "Apartment",
+      "Independent House",
+      "Villa"
+    ],
+    "Furnished_Status": [
+      "Furnished",
+      "Semi-furnished",
+      "Unfurnished"
+    ],
+    "Public_Transport_Accessibility": [
+      "High",
+      "Low",
+      "Medium"
+    ],
+    "Facing": [
+      "East",
+      "North",
+      "South",
+      "West"
+    ],
+    "Owner_Type": [
+      "Broker",
+      "Builder",
+      "Owner"
+    ],
+    "Availability_Status": [
+      "Ready_to_Move",
+      "Under_Construction"
+    ]
+  },
+  "amenities": [
+    "Gym",
+    "Pool",
+    "Clubhouse",
+    "Garden",
+    "Playground"
+  ],
+  "ranges": {
+    "size": [
+      500,
+      5000
+    ],
+    "price": [
+      10.0,
+      500.0
+    ]
+  },
+  "reg_target": "price",
+  "reg_unit": "\u20b9 Lakh",
+  "decision_threshold": 0.5,
+  "split_note": "Random stratified split (legacy mode \u2014 no dates available).",
+  "honesty_note": "LEGACY MODE: targets are engineered from documented growth rules (the source data has no price history), so scores measure rule recovery, not real-market performance. Supply data/real/* to switch to realised outcomes.",
+  "calibration": {
+    "raw (uncalibrated)": {
+      "Log-loss": 0.32638,
+      "Brier": 0.10384,
+      "ECE": 0.00414,
+      "ROC_AUC": 0.93368
+    },
+    "calibrated (isotonic)": {
+      "Log-loss": 0.32606,
+      "Brier": 0.10389,
+      "ECE": 0.00317,
+      "ROC_AUC": 0.9336
+    }
+  },
+  "reg_metrics": {
+    "RMSE": 15.48978674659763,
+    "MAE": 10.920094030301406,
+    "R2": 0.9938562981984669,
+    "MAPE": 0.03197627523447999
+  },
+  "reliability": [
+    {
+      "mean_predicted": 0.03138801741377576,
+      "observed_rate": 0.026589084481107757,
+      "n": 13577,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.146726239682528,
+      "observed_rate": 0.15269886363636365,
+      "n": 4224,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.24854810498849883,
+      "observed_rate": 0.2486910994764398,
+      "n": 3056,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.34822176270175387,
+      "observed_rate": 0.34775888717156106,
+      "n": 2588,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.44884103811149945,
+      "observed_rate": 0.4326802834514381,
+      "n": 2399,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.5505153123645186,
+      "observed_rate": 0.5524091293322062,
+      "n": 2366,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.651280406381769,
+      "observed_rate": 0.6475066615911687,
+      "n": 2627,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.7509408863449869,
+      "observed_rate": 0.7513495276653172,
+      "n": 2964,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.8526626358874113,
+      "observed_rate": 0.8516536964980544,
+      "n": 4112,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.9673835225147498,
+      "observed_rate": 0.9720360718126914,
+      "n": 12087,
+      "model": "raw"
+    },
+    {
+      "mean_predicted": 0.027604332152353944,
+      "observed_rate": 0.02829849888673418,
+      "n": 13923,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.15936837314792568,
+      "observed_rate": 0.16388502549837738,
+      "n": 4314,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.25440996800496324,
+      "observed_rate": 0.2549889135254989,
+      "n": 2706,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.3545455391555648,
+      "observed_rate": 0.34835720303285594,
+      "n": 2374,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.4471827482381468,
+      "observed_rate": 0.4249585406301824,
+      "n": 2412,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.5465210679934115,
+      "observed_rate": 0.5489539748953974,
+      "n": 2390,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.6571863641297139,
+      "observed_rate": 0.6583258862079238,
+      "n": 3357,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.7639857043446497,
+      "observed_rate": 0.770059048280653,
+      "n": 2879,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.8619734584781663,
+      "observed_rate": 0.8637803590285111,
+      "n": 3788,
+      "model": "calibrated"
+    },
+    {
+      "mean_predicted": 0.9750972116155368,
+      "observed_rate": 0.9729273846672851,
+      "n": 11857,
+      "model": "calibrated"
+    }
+  ],
+  "tuning": {
+    "clf_history": [
+      0.33156739135187124,
+      0.3402639208327906,
+      0.33189650890739064,
+      0.3343114669669603,
+      0.332523185503697,
+      0.4489940111101715,
+      0.32799125401027596,
+      0.5043663337409012,
+      0.3998086015585714,
+      0.3303818475583671,
+      0.32998544648180644,
+      0.32976928504095476,
+      0.3287355384786513,
+      0.32882039454287604,
+      0.3479429138041539,
+      0.3300782030546177,
+      0.3282890117902844,
+      0.3290228166455232,
+      0.3269480742957785,
+      0.3294534040698532,
+      0.33238339503270836,
+      0.3277538670204628,
+      0.3286951527194188,
+      0.32739056904786007,
+      0.32952905078453165
+    ],
+    "reg_history": [
+      16.266920776889005,
+      17.88534262289711,
+      16.21286411850287,
+      16.48100573496143,
+      17.242625803265618,
+      59.6712566785338,
+      15.879845334318906,
+      82.62745234097288,
+      34.10442460085707,
+      15.966900565726563,
+      15.88169006312748,
+      15.894244546614393,
+      15.739770398380827,
+      15.783598027011417,
+      15.78565599975641,
+      15.913049750555201,
+      16.01487765997511,
+      15.783165668255458,
+      16.14804553985744,
+      15.827386267650544,
+      15.953919855286012,
+      15.783694928494961,
+      15.770703487120118,
+      15.906604172310388,
+      15.896874039736993
+    ],
+    "clf_best_params": {
+      "n_estimators": 250,
+      "max_depth": 2,
+      "learning_rate": 0.14555814304211392,
+      "subsample": 0.938067605044832,
+      "colsample_bytree": 0.870852101640673,
+      "min_child_weight": 97.83757115163274,
+      "reg_lambda": 18.144674527026382,
+      "gamma": 2.6888013013561083
+    },
+    "reg_best_params": {
+      "n_estimators": 200,
+      "max_depth": 4,
+      "learning_rate": 0.08330632494840116,
+      "subsample": 0.8827538605751757,
+      "colsample_bytree": 0.9929596721608326,
+      "min_child_weight": 160.321722052404,
+      "reg_lambda": 2.3133678526433097,
+      "gamma": 2.1149373486873917
+    }
+  },
+  "shap_clf": {
+    "City_Tier": 1.7244800329208374,
+    "Infrastructure_Score": 1.017799973487854,
+    "Log_PPS_vs_City": 0.7927600145339966,
+    "Age_of_Property": 0.6889899969100952,
+    "Property_Type": 0.41951000690460205,
+    "Availability_Status": 0.41433000564575195,
+    "PPS_INR": 0.3590199947357178,
+    "Size_in_SqFt": 0.014560000039637089,
+    "Price_in_Lakhs": 0.01425000000745058,
+    "Nearby_Schools": 0.009239999577403069,
+    "Total_Floors": 0.007069999817758799,
+    "Public_Transport_Accessibility": 0.0036100000143051147
+  },
+  "shap_reg": {
+    "Price_in_Lakhs": 170.9980010986328,
+    "City_Tier": 13.620630264282227,
+    "Infrastructure_Score": 8.486359596252441,
+    "Size_in_SqFt": 5.825319766998291,
+    "Age_of_Property": 5.6697001457214355,
+    "Property_Type": 3.380280017852783,
+    "Availability_Status": 3.3130099773406982,
+    "Log_PPS_vs_City": 0.8958699703216553,
+    "PPS_INR": 0.3078700006008148,
+    "Public_Transport_Accessibility": 0.04374999925494194,
+    "Size_per_BHK": 0.041359998285770416,
+    "City": 0.03413999825716019
+  }
+}
